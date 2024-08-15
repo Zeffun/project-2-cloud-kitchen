@@ -28,11 +28,11 @@ function App() {
       <main className="container">
         <NavBar />
         <Routes>
-          <Route path="/" element={<h2>Home</h2>} />
+          <Route path="/" element={""} />
           <Route path="/find-recipes" element={<FindRecipes />} />
           <Route path="/my-recipes" element={<MyRecipes />} />
           <Route path="/my-recipes/edit/:recipeId" element={<EditRecipe />} />
-          <Route path="/myrecipes/create" element={<CreateRecipe />} />
+          <Route path="/create-recipe" element={<CreateRecipe />} />
         </Routes>
       </main>
     </>
