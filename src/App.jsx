@@ -24,7 +24,6 @@ function App() {
     <>
       <header className="container">
         <h1>Cloud Kitchen</h1>
-        <button onClick={fetchRecipe}>Test API</button>
       </header>
       <main className="container">
         <NavBar />

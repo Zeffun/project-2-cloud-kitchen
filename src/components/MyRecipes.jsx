@@ -1,28 +1,33 @@
 import * as recipeService from "../services/recipeService";
-
+import Recipe from "./Recipe";
 import { useState, useEffect } from 'react';
 
 const MyRecipes = () => {
 
-    const [recipes, setRecipes] = useState([""]);
+    const [myRecipes, setMyRecipes] = useState([]);
   
-    const fetchRecipe = async (searchInput) => {
-      const data = await recipeService.getRecipe(searchInput);
-      setRecipes(data);
-    }
+    // const fetchRecipe = async (searchInput) => {
+    //   const data = await recipeService.getRecipe(searchInput);
+    //   setRecipes(data);
+    // };
   
     useEffect(() => {
-      fetchRecipe("");
+      const loadMyRecipes = async () => {
+        const data = await recipeService.getRecipeDB();
+        setMyRecipes(data);
+      }
+      loadMyRecipes();
     }, []);
 
     return (
-        <main>
-              <h1>My Recipes</h1>
-              <h2>Search</h2>
-              <h2>Recipes</h2>
-              <p>Number of Results: {recipes.length}</p>
-        </main>
-      );
+      <>
+        <h1>My Recipes</h1>
+        {/* <RecipeList recipes={recipes}/> */}
+        {myRecipes ? myRecipes.map((recipe, index) => (
+          <Recipe key={index} recipe={recipe} />
+        )) : "No results"}
+      </>
+    );
 
 }
 

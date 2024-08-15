@@ -4,13 +4,7 @@ const NavBar = () => {
     return (
         <nav>
                 <p>
-                    <Link to="/">Home</Link>
-                </p>
-                <p>
-                    <Link to="/find-recipes">Find Recipes</Link>
-                </p>
-                <p>
-                    <Link to="/my-recipes">My Recipes</Link>
+                    <span><Link to="/">Home</Link></span> | <span><Link to="/find-recipes">Find Recipes</Link></span> | <span><Link to="/my-recipes">My Recipes</Link></span> | <span><Link to="/create-recipe">Create Recipe</Link></span>
                 </p>
         </nav>
     );

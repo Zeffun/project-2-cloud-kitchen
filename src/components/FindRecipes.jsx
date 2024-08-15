@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 const FindRecipes = () => {
 
-    const [recipes, setRecipes] = useState([""]);
+    const [recipes, setRecipes] = useState([]);
     // const [savedRecipe, setSavedRecipe] = useState({
     //   name: "",
     //   category: "",
@@ -23,6 +23,7 @@ const FindRecipes = () => {
     const handleSave = async (recipe) => {
       const savedRecipe = {
         name: recipe.strMeal,
+        image: recipe.strMealThumb,
         category: recipe.strCategory,
         cuisine: recipe.strArea,
         instructions: recipe.strInstructions

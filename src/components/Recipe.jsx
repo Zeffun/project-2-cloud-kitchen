@@ -2,11 +2,11 @@ const Recipe = (props) => {
 
     return (
         <section>
-            <h3>{props.recipe.strMeal}</h3>
-            <img src={props.recipe.strMealThumb}/>
-            <p>Category: {props.recipe.strCategory}</p>
-            <p>Cuisine: {props.recipe.strArea}</p>
-            <p>Instructions: {props.recipe.strInstructions}</p>
+            <h3>{props.recipe.strMeal || props.recipe.name}</h3>
+            <img src={props.recipe.strMealThumb || props.recipe.image}/>
+            <p>Category: {props.recipe.strCategory || props.recipe.category}</p>
+            <p>Cuisine: {props.recipe.strArea || props.recipe.cuisine}</p>
+            <p>Instructions: {props.recipe.strInstructions || props.recipe.instructions}</p>
             <button onClick={props.save}>Save</button>
             <br></br>
         </section>

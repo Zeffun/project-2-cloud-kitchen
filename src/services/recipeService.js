@@ -36,6 +36,28 @@ const saveRecipeDB = async (recipeToSave) => {
     } catch (error) {
       console.error(error.message);
     }
-  };
+};
 
-export { getRecipeAPI, saveRecipeDB };
+const getRecipeDB = async () => {
+    const url = "https://api.airtable.com/v0/appCjh8hlvQLUjYTJ/Table%201";
+    try {
+        const response = await fetch(url, {
+          headers,
+        });
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+    
+        const json = await response.json();
+        return json.records.map((record) => {
+          return {
+            id: record.id,
+            ...record.fields,
+          };
+        });
+      } catch (error) {
+        console.error(error.message);
+      }
+}
+
+export { getRecipeAPI, saveRecipeDB, getRecipeDB };
