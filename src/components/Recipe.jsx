@@ -7,7 +7,7 @@ const Recipe = (props) => {
             <p>Category: {props.recipe.strCategory}</p>
             <p>Cuisine: {props.recipe.strArea}</p>
             <p>Instructions: {props.recipe.strInstructions}</p>
-            <div><button>Save</button> <button>Remove</button> <button>Edit</button></div>
+            <button onClick={props.save}>Save</button>
             <br></br>
         </section>
     );

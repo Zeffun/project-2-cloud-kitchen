@@ -1,4 +1,3 @@
-import RecipeList from './RecipeList';
 import * as recipeService from "../services/recipeService";
 
 import { useState, useEffect } from 'react';
@@ -22,7 +21,6 @@ const MyRecipes = () => {
               <h2>Search</h2>
               <h2>Recipes</h2>
               <p>Number of Results: {recipes.length}</p>
-              <RecipeList recipes={recipes}/>
         </main>
       );
 
