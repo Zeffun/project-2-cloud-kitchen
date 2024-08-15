@@ -4,16 +4,12 @@ import RecipeSearch from './RecipeSearch';
 import Recipe from './Recipe';
 
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const FindRecipes = () => {
 
     const [recipes, setRecipes] = useState([]);
-    // const [savedRecipe, setSavedRecipe] = useState({
-    //   name: "",
-    //   category: "",
-    //   cuisine: "",
-    //   instructions: "",
-    // });
+    const navigate = useNavigate();
   
     const fetchRecipes = async (searchInput) => {
       const data = await recipeService.getRecipeAPI(searchInput);
@@ -29,7 +25,7 @@ const FindRecipes = () => {
         instructions: recipe.strInstructions
       };
       await recipeService.saveRecipeDB(savedRecipe);
-      await console.log(savedRecipe);
+      navigate("/my-recipes");
     };
   
     useEffect(() => {

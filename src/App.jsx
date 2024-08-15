@@ -13,13 +13,6 @@ import * as recipeService from "./services/recipeService";
 
 function App() {
 
-  const [myRecipes, setMyRecipes] = useState([""]);
-
-  const fetchRecipe = async () => {
-    const data = await recipeService.getRecipe("Arrabiata");
-    console.log(data);
-  }
-
   return (
     <>
       <header className="container">
@@ -28,7 +21,7 @@ function App() {
       <main className="container">
         <NavBar />
         <Routes>
-          <Route path="/" element={""} />
+          <Route path="/" element={<img width="100" src="https://static.vecteezy.com/system/resources/previews/026/757/704/non_2x/chef-hat-with-ai-generated-free-png.png"/>} />
           <Route path="/find-recipes" element={<FindRecipes />} />
           <Route path="/my-recipes" element={<MyRecipes />} />
           <Route path="/my-recipes/edit/:recipeId" element={<EditRecipe />} />
