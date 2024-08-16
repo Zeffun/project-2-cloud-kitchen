@@ -12,6 +12,7 @@ Getting started:
 Technologies used: 
 - JavaScript
 - React
+- React Router DOM
 
 Next steps: Planned future enhancements (stretch goals).
 - Include edit recipe functionality
