@@ -18,3 +18,5 @@ Next steps: Planned future enhancements (stretch goals).
 - Include edit recipe functionality
 - Include delete recipe functionality
 - List ingredients by structuring the data from the API in my services functions
+- Add additional CSS styling using external CSS library (e.g Bootstrap) for visual appeal
+- For create image functionality, instead of an imageURL field, use an image uploader component (i.e click "add image") to upload images from personal files 
