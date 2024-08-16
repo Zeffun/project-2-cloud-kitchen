@@ -1,4 +1,4 @@
-# project-2-cloud-kitchen
+# Cloud Kitchen
 
 App name: Cloud Kitchen.
 - This app allows you to query a free external recipes API (https://www.themealdb.com/api/json/v1/1/), search for recipes by keyword and save recipes that you like to your own cookbook. You can also create and upload your own recipes to save to the Airtable database 
